@@ -49,10 +49,31 @@ func checkElementRepeatedNumberSubFunction(arr []int, n int, i int)int{
 	}
 }
 
+// func binarySearch(arr []int, n int)bool{
+
+// 	return binarySearchSubFunction(arr, n, 0, len(arr))
+// }
+
+// func binarySearchSubFunction(arr []int, n int, start int, end int)bool{
+// 	var mid int
+// 	mid = (end - start) / 2
+// 	if arr[mid] == n {
+// 		return true	
+// 	}
+// 	if arr[mid] < n {
+// 		return binarySearchSubFunction(arr, n, mid + 1, end)	
+// 	}
+// 	if arr[mid] > n {
+// 		return binarySearchSubFunction(arr, n, start, mid - 1)	
+// 	}
+// 	return false
+// }
+
+
 func main(){
 
 	var arr []int
-	arr = append(arr, 1,2,3,4,21,1,1,1)
+	arr = append(arr, 1,2,3,4,21,33)
 	fmt.Println(isArraySorted(arr))
 	fmt.Println(checkElement(arr,2))
 	fmt.Println(checkElementRepeatedNumber(arr, 1))
