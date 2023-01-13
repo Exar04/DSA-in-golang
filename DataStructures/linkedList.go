@@ -44,6 +44,26 @@ func (l *linkedList) deleteAtHead(){
 	l.head = temp
 }
 
+func (l *linkedList) addAfterVal(AtVal int, val int){
+	newNode := &node{data: val}
+	temp := l.head
+	for temp.data != AtVal {
+		temp = temp.next	
+	}
+	
+	newNode.next, temp.next = temp.next, newNode
+}
+
+func (l *linkedList) addBeforeVal(AtVal int, val int){
+	newNode := &node{data: val}
+	temp := l.head
+	for temp.next.data != AtVal {
+		temp = temp.next	
+	}
+	
+	newNode.next, temp.next = temp.next, newNode
+}
+
 func (l *linkedList) printAllNodes(){
 	temp := l.head
 	for temp != nil{
@@ -64,6 +84,8 @@ func main(){
 
 	Lis.deleteAtHead()
 	Lis.deleteAtEnd()
+	Lis.addAfterVal(4,3)
+	Lis.addBeforeVal(4,9)
 
 	Lis.printAllNodes()
 
