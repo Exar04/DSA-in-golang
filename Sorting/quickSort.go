@@ -2,39 +2,6 @@ package main
 
 import "fmt"
 
-// This code is broken
-// func quickSort(arr []int, low int, high int){
-
-// 	if low >= high {
-// 		return
-// 	}
-// 	s := low
-// 	e := high
-// 	mid := low + (high - low)/2
-// 	povit := arr[mid]
-
-// 	for s <= e {
-// 		fmt.Print("o")
-// 		for arr[s]<= povit && s <= e{
-// 		fmt.Print("e")
-// 			s++		
-// 		}
-// 		for arr[e] >= povit && e > s{
-// 			e--
-// 		}	
-// 		if s <= e {
-// 			temp := arr[s]
-// 			arr[s] = arr[e]
-// 			arr[e] = temp
-// 			e--
-// 			s++
-// 		}
-// 	}
-// 	quickSort(arr, low, e)
-// 	quickSort(arr, s, high)
-// }
-
-
 func quickSort(arr []int) []int {
 	return quickSortSubFunc(arr, 0, len(arr)-1)
 }
