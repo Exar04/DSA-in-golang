@@ -10,9 +10,11 @@ type node struct{
 
 type BinaryTree struct{
 	root *node
+	length int
 }
 
 func(b *BinaryTree) add(val int){
+	
 }
 
 
